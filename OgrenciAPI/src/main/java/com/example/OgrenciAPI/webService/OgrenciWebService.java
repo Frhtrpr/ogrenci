@@ -24,8 +24,9 @@ public class OgrenciWebService {
     }
 
     @PostMapping("/ekle")
-    public boolean ekle( @RequestBody Ogrenci yeniOgrenci) {
+    public Ogrenci ekle(@RequestBody Ogrenci yeniOgrenci) {
         ogrenciler.add(yeniOgrenci);
-        return true;
+        return yeniOgrenci;
     }
+
 }
